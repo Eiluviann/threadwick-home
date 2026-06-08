@@ -1,7 +1,9 @@
-import { Col, Row } from 'antd';
+import { useState } from 'react';
+import { Col, Row, Select } from 'antd';
 import { Check } from 'iconoir-react';
 import { SectionHeading } from '../components/SectionHeading';
 import { StitchLegend } from '../components/StitchLegend';
+import type { CrochetRegion } from '../data/stitches';
 import { colors } from '../theme/tokens';
 
 const points = [
@@ -11,6 +13,8 @@ const points = [
 ];
 
 export function DesignApproach() {
+  const [region, setRegion] = useState<CrochetRegion>('US');
+
   return (
     <section
       aria-labelledby="approach-title"
@@ -54,10 +58,30 @@ export function DesignApproach() {
           </Col>
 
           <Col xs={24} md={{ span: 13, order: 1 }}>
-            <h3 style={{ margin: '0 0 14px', fontSize: 16, color: colors.text }}>
-              The symbols you’ll see
-            </h3>
-            <StitchLegend />
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: 12,
+                flexWrap: 'wrap',
+                marginBottom: 14,
+              }}
+            >
+              <h3 style={{ margin: 0, fontSize: 16, color: colors.text }}>The symbols you’ll see</h3>
+              <Select<CrochetRegion>
+                size="small"
+                value={region}
+                onChange={setRegion}
+                aria-label="Choose crochet terminology"
+                style={{ minWidth: 116 }}
+                options={[
+                  { value: 'US', label: 'US terms' },
+                  { value: 'UK', label: 'UK terms' },
+                ]}
+              />
+            </div>
+            <StitchLegend region={region} />
           </Col>
         </Row>
       </div>

@@ -8,25 +8,36 @@
  *   sc         -> cross
  *   hdc        -> T (vertical bar + top cap)
  *   dc/tr/dtr  -> T with 1 / 2 / 3 diagonal slashes (slashes encode stitch height)
+ *
+ * The symbol is the same worldwide; only the *name* differs between US and UK
+ * conventions (UK terms run "one taller" than US).
  */
 export type StitchType = 'chain' | 'slip' | 'sc' | 'hdc' | 'dc' | 'tr' | 'dtr';
 
+export type CrochetRegion = 'US' | 'UK';
+
 export interface StitchDef {
   type: StitchType;
-  abbr: string;
-  name: string;
-  blurb: string;
+  /** US crochet term */
+  us: string;
+  /** UK crochet term */
+  uk: string;
 }
 
 export const STITCHES: StitchDef[] = [
-  { type: 'chain', abbr: 'ch', name: 'Chain', blurb: 'An open oval' },
-  { type: 'slip', abbr: 'sl st', name: 'Slip stitch', blurb: 'A small filled dot' },
-  { type: 'sc', abbr: 'sc', name: 'Single crochet', blurb: 'A cross' },
-  { type: 'hdc', abbr: 'hdc', name: 'Half double', blurb: 'A T' },
-  { type: 'dc', abbr: 'dc', name: 'Double crochet', blurb: 'A T with one slash' },
-  { type: 'tr', abbr: 'tr', name: 'Treble', blurb: 'A T with two slashes' },
-  { type: 'dtr', abbr: 'dtr', name: 'Double treble', blurb: 'A T with three slashes' },
+  { type: 'chain', us: 'Chain', uk: 'Chain' },
+  { type: 'slip', us: 'Slip stitch', uk: 'Slip stitch' },
+  { type: 'sc', us: 'Single crochet', uk: 'Double crochet' },
+  { type: 'hdc', us: 'Half double crochet', uk: 'Half treble' },
+  { type: 'dc', us: 'Double crochet', uk: 'Treble' },
+  { type: 'tr', us: 'Treble', uk: 'Double treble' },
+  { type: 'dtr', us: 'Double treble', uk: 'Triple treble' },
 ];
+
+/** Returns the stitch name for the chosen region. */
+export function stitchName(s: StitchDef, region: CrochetRegion): string {
+  return region === 'UK' ? s.uk : s.us;
+}
 
 /** Number of diagonal slashes across the stem for the "post" stitches. */
 export const STITCH_SLASHES: Record<StitchType, number> = {

@@ -1,9 +1,9 @@
-import { STITCHES } from '../data/stitches';
+import { STITCHES, stitchName, type CrochetRegion } from '../data/stitches';
 import { colors, radii } from '../theme/tokens';
 import { StitchSymbol } from './StitchSymbol';
 
-/** A small grid pairing each crochet symbol with its name and abbreviation. */
-export function StitchLegend() {
+/** A small grid pairing each crochet symbol with its name (US or UK term). */
+export function StitchLegend({ region }: { region: CrochetRegion }) {
   return (
     <ul
       style={{
@@ -42,7 +42,7 @@ export function StitchLegend() {
           >
             <StitchSymbol type={s.type} size={28} />
           </span>
-          <span style={{ minWidth: 0, fontWeight: 600 }}>{s.name}</span>
+          <span style={{ minWidth: 0, fontWeight: 600 }}>{stitchName(s, region)}</span>
         </li>
       ))}
     </ul>
