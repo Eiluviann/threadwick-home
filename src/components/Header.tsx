@@ -28,7 +28,7 @@ export function Header() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          gap: 16,
+          gap: 12,
           height: 64,
           boxSizing: 'border-box',
         }}

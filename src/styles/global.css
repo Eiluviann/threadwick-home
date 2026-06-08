@@ -9,10 +9,15 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  /* Lock horizontal scrolling (clip doesn't break position: sticky the way
+     overflow:hidden can) and stop the sideways overscroll bounce on mobile. */
+  overflow-x: clip;
+  overscroll-behavior-x: none;
 }
 
 body {
   margin: 0;
+  overflow-x: clip;
   font-family: var(--tw-font-body);
   color: var(--tw-text);
   /* Set the on-brand background immediately so first paint (before AntD styles

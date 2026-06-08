@@ -42,5 +42,5 @@
 
   /* Layout */
   --tw-container: 1120px;
-  --tw-gutter: clamp(20px, 5vw, 40px);
+  --tw-gutter: clamp(16px, 5vw, 40px);
 }

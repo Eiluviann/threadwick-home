@@ -23,23 +23,26 @@ function Mark({ size = 28 }: { size?: number }) {
  * homepage root by default.
  */
 export function Wordmark({
-  size = 30,
-  fontSize = 20,
+  size = 28,
   asLink = true,
   showTagline = false,
 }: {
   size?: number;
-  fontSize?: number;
   asLink?: boolean;
   showTagline?: boolean;
 }) {
   const inner = (
-    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}>
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
       <Mark size={size} />
       <span style={{ display: 'inline-flex', flexDirection: 'column', lineHeight: 1.05 }}>
         <span
           className="tw-display"
-          style={{ fontSize, fontWeight: 700, color: colors.text, letterSpacing: '-0.02em' }}
+          style={{
+            fontSize: 'clamp(17px, 4.6vw, 20px)',
+            fontWeight: 700,
+            color: colors.text,
+            letterSpacing: '-0.02em',
+          }}
         >
           threadwick
         </span>
