@@ -22,6 +22,7 @@ export function StitchLegend({ region }: { region: CrochetRegion }) {
             display: 'flex',
             alignItems: 'center',
             gap: 12,
+            height: 64,
             padding: '10px 12px',
             background: colors.bgContainer,
             border: `1px solid ${colors.border}`,
@@ -42,7 +43,19 @@ export function StitchLegend({ region }: { region: CrochetRegion }) {
           >
             <StitchSymbol type={s.type} size={28} />
           </span>
-          <span style={{ minWidth: 0, fontWeight: 600 }}>{stitchName(s, region)}</span>
+          <span
+            style={{
+              minWidth: 0,
+              fontWeight: 600,
+              lineHeight: 1.2,
+              display: '-webkit-box',
+              WebkitBoxOrient: 'vertical',
+              WebkitLineClamp: 2,
+              overflow: 'hidden',
+            }}
+          >
+            {stitchName(s, region)}
+          </span>
         </li>
       ))}
     </ul>
