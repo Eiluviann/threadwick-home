@@ -11,7 +11,7 @@ export function Features() {
           id="features-title"
           eyebrow="What you get"
           title="Made for keeping projects together"
-          lead="Everything you need to chart, save and share a make — and nothing you don’t."
+          lead="Everything you need to chart, save and share your projects — without the clutter."
           align="center"
         />
         <Row gutter={[20, 20]}>

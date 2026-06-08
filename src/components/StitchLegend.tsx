@@ -42,12 +42,7 @@ export function StitchLegend() {
           >
             <StitchSymbol type={s.type} size={28} />
           </span>
-          <span style={{ minWidth: 0 }}>
-            <span style={{ display: 'block', fontWeight: 600, lineHeight: 1.2 }}>{s.name}</span>
-            <span style={{ display: 'block', fontSize: 13, color: colors.textTertiary }}>
-              {s.abbr} · {s.blurb}
-            </span>
-          </span>
+          <span style={{ minWidth: 0, fontWeight: 600 }}>{s.name}</span>
         </li>
       ))}
     </ul>
