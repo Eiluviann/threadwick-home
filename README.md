@@ -39,15 +39,20 @@ VITE_STUDIO_URL=http://localhost:5173/ npm run dev
 2. Add the domain `threadwick.com` in the Vercel dashboard and point DNS as Vercel instructs.
 3. Production deploys from the default branch; every PR/branch gets an automatic preview URL.
 
-`vercel.json` rewrites `/studio/*` to the Studio so both live under one domain — no GitHub Pages and no
-Cloudflare needed.
+Attach `threadwick.com` to **this** project only. A Vercel domain can live on a single project, so the
+Studio is *not* given the apex domain — it's reached through a proxy rewrite instead.
 
-### ⚠️ `/studio` coordination (Studio repo)
+### How `/studio` works
 
-The Studio (`Eiluviann/threadwick`) currently builds with Vite `base: '/threadwick/'`, so its assets load
-from `/threadwick/...` and **won't resolve under `/studio`** until its `base` is set to `/studio/` (or the
-rewrite is extended to also proxy the asset path). Until that's coordinated, this homepage's CTA uses the
-live Studio URL fallback in non-production builds.
+`threadwick.com` is served by this project; `vercel.json` proxies the Studio in place:
+
+- `/studio` → the Studio's index (`https://eiluviann.github.io/threadwick/`)
+- `/studio/*` and `/threadwick/*` → the Studio's files
+
+The Studio builds with Vite `base: '/threadwick/'`, so its HTML requests assets from `/threadwick/...`;
+the `/threadwick/*` rewrite forwards those to the Studio's origin. This means **no change is needed in the
+Studio repo** — it keeps running on GitHub Pages, and the homepage proxies to it. To repoint the Studio
+origin (e.g. to a Vercel deployment), update the three `destination` URLs in `vercel.json`.
 
 ## Assets
 

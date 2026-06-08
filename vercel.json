@@ -8,6 +8,10 @@
     {
       "source": "/studio/:path*",
       "destination": "https://eiluviann.github.io/threadwick/:path*"
+    },
+    {
+      "source": "/threadwick/:path*",
+      "destination": "https://eiluviann.github.io/threadwick/:path*"
     }
   ]
 }
