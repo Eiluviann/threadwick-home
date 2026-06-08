@@ -12,9 +12,9 @@
   </g>
 
   <!-- headline -->
-  <text x="88" y="320" font-size="66" font-weight="700" fill="#21201c" font-family="Space Grotesk, Inter, sans-serif" letter-spacing="-1.5">A studio for</text>
-  <text x="88" y="394" font-size="66" font-weight="700" fill="#c2603f" font-family="Space Grotesk, Inter, sans-serif" letter-spacing="-1.5">fiber artists</text>
+  <text x="88" y="318" font-size="66" font-weight="700" fill="#21201c" font-family="Space Grotesk, Inter, sans-serif" letter-spacing="-1.5">A studio</text>
+  <text x="88" y="392" font-size="66" font-weight="700" font-family="Space Grotesk, Inter, sans-serif" letter-spacing="-1.5"><tspan fill="#21201c">for </tspan><tspan fill="#c2603f">fiber artists</tspan></text>
 
-  <text x="90" y="462" font-size="27" fill="#6b675f">Design crochet granny-square charts the way you crochet them.</text>
-  <text x="90" y="500" font-size="27" fill="#6b675f">Free in your browser — no account needed.</text>
+  <text x="90" y="470" font-size="32" fill="#6b675f">Design crochet granny-square charts the way you crochet them.</text>
+  <text x="90" y="516" font-size="32" fill="#6b675f">Free in your browser — no account needed.</text>
 </svg>
