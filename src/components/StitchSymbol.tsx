@@ -48,7 +48,7 @@ export function StitchGlyph({
       <line x1={-5} y1={-8} x2={5} y2={-8} />
       {Array.from({ length: slashes }).map((_, i) => {
         const yc = start + i * gap;
-        return <line key={i} x1={-4.5} y1={yc + 2.4} x2={4.5} y2={yc - 2.4} />;
+        return <line key={i} x1={-4.5} y1={yc - 2.4} x2={4.5} y2={yc + 2.4} />;
       })}
     </g>
   );
