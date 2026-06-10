@@ -33,16 +33,19 @@ function chipStyle(feature: PlannedFeature): CSSProperties {
 /** Decorative "progress" strip for the hero tile: stitches done, stitches to go. */
 function FollowAlongStrip() {
   const done = colors.primary;
-  const upcoming = 'rgba(246, 244, 239, 0.35)';
+  // Faded markers: keep a SOLID stroke colour and fade the whole SVG via opacity.
+  // Per-stroke alpha would stack where strokes intersect (cross, slashed T) and
+  // leave darker artifacts at the overlaps.
+  const upcoming = { color: CREAM, style: { opacity: 0.35 } as const };
   return (
     <div aria-hidden style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: 6, paddingTop: 18 }}>
       <StitchSymbol type="chain" size={26} color={done} />
       <StitchSymbol type="sc" size={26} color={done} />
       <StitchSymbol type="dc" size={26} color={done} />
-      <StitchSymbol type="dc" size={26} color={upcoming} />
-      <StitchSymbol type="tr" size={26} color={upcoming} />
+      <StitchSymbol type="dc" size={26} {...upcoming} />
+      <StitchSymbol type="tr" size={26} {...upcoming} />
       <span style={{ marginLeft: 8, fontSize: 12.5, color: 'rgba(246, 244, 239, 0.6)' }}>
-        round 2 of 5
+        Round 3 of 5
       </span>
     </div>
   );
