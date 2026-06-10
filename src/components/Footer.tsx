@@ -5,6 +5,7 @@ import { Wordmark } from './Wordmark';
 
 const navLinks = [
   { href: '#roadmap', label: 'What’s coming' },
+  { href: '#promise', label: 'Our promise' },
   { href: '#features', label: 'Features' },
   { href: '#how-it-works', label: 'How it works' },
   { href: '#faq', label: 'FAQ' },
@@ -30,7 +31,7 @@ export function Footer() {
           <div style={{ maxWidth: 320 }}>
             <Wordmark showTagline />
             <p style={{ margin: '14px 0 0', color: colors.textSecondary, fontSize: 14 }}>
-              A home for fiber artists and hobbyists. Design crochet charts the way you make them.
+              Fair tools for fiber artists and makers. Built for the people who make — not investors.
             </p>
           </div>
 
