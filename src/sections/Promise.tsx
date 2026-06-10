@@ -34,8 +34,9 @@ export function OurPromise() {
             Fair tools for fiber artists &amp; makers
           </h2>
           <p style={{ margin: '14px 0 0', fontSize: 'clamp(15px, 1.6vw, 17px)', color: 'rgba(246, 244, 239, 0.75)' }}>
-            This isn’t a tagline — it’s how we make decisions. We’re building Threadwick to be fair to
-            the artists who design patterns and the makers who follow them.
+            This isn’t a tagline — it’s how we make decisions. The tools are free; paying only ever
+            enters the picture if you choose to sell through the platform. That’s how we’re building
+            Threadwick to be fair to the artists who design patterns and the makers who follow them.
           </p>
         </div>
 

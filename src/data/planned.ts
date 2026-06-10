@@ -80,14 +80,14 @@ export const PLANNED_FEATURES: PlannedFeature[] = [
     size: 'wide',
     accent: 'wash',
     title: 'A marketplace that’s fair to makers',
-    body: 'Publish your patterns for others to browse and buy. We handle the payments — you keep most of the revenue.',
+    body: 'A completely optional way to sell: publish your patterns for others to browse and buy, we handle the payments — and you keep most of the revenue.',
   },
   {
     icon: Key,
     audience: 'artists',
     size: 'wide',
     title: 'Sell directly to your buyers',
-    body: 'Issue license keys for your patterns. Buyers pay you directly and redeem their key in the app for permanent access — and this stays, even after the marketplace arrives.',
+    body: 'Issue license keys for your patterns. Buyers pay you directly — the money goes straight to you — and redeem their key in the app for permanent access. This stays, even after the marketplace arrives.',
   },
   {
     icon: Fingerprint,

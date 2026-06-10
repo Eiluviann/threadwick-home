@@ -32,7 +32,7 @@ export function AccountBand() {
               color: colors.textSecondary,
             }}
           >
-            Start free right in your browser — your work stays with you. Create an account when you’re
+            Start free right in your browser — your work stays with you. Create a free account when you’re
             ready for more: sync across your devices, keep cloud backups, and share your patterns. Your
             work is always yours — export it and walk away anytime, no lock-in.
           </Paragraph>

@@ -73,7 +73,7 @@ export function Hero() {
           </div>
 
           <p style={{ margin: '18px 0 0', fontSize: 14, color: colors.textTertiary }}>
-            Fair by design — minimal fees, no lock-in, your work stays yours.{' '}
+            Fair by design — free to use, no lock-in, and selling through us is always optional.{' '}
             <a href="#promise" style={{ color: colors.link, fontWeight: 600 }}>
               Our promise →
             </a>
