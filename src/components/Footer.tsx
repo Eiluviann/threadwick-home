@@ -4,8 +4,8 @@ import { colors } from '../theme/tokens';
 import { Wordmark } from './Wordmark';
 
 const navLinks = [
-  { href: '#roadmap', label: 'What’s coming' },
   { href: '#promise', label: 'Our promise' },
+  { href: '#roadmap', label: 'What’s coming' },
   { href: '#features', label: 'Features' },
   { href: '#how-it-works', label: 'How it works' },
   { href: '#faq', label: 'FAQ' },

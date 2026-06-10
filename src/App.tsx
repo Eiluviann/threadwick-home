@@ -18,12 +18,12 @@ export default function App() {
       <Header />
       <main id="main">
         <Hero />
+        <div id="promise">
+          <OurPromise />
+        </div>
         <DesignApproach />
         <div id="roadmap">
           <Roadmap />
-        </div>
-        <div id="promise">
-          <OurPromise />
         </div>
         <div id="features">
           <Features />
