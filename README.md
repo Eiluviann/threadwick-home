@@ -63,8 +63,9 @@ owns the domain), and the Studio is a **child app** mounted at `/studio`. Routin
 5. Deploy both. `/studio` now routes to the Studio at the edge; the homepage CTA (`/studio`) just works.
 
 **Local dev** (both apps on one origin): start each app's dev server, then run the microfrontends proxy
-(`npx vercel microfrontends dev`, default port `:3024`). The `development.fallback` URLs in
-`microfrontends.json` must match each project's real `.vercel.app` domain.
+(`npx vercel microfrontends dev`, default port `:3024`). Linked projects in the group resolve
+automatically; the default app's `development.fallback` (its `.vercel.app` domain) lets the proxy reach a
+deployed app you're not running locally — add one per app to override.
 
 ## Assets
 

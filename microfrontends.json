@@ -7,9 +7,6 @@
       }
     },
     "threadwick-studio": {
-      "development": {
-        "fallback": "threadwick-studio.vercel.app"
-      },
       "routing": [
         {
           "paths": ["/studio", "/studio/:path*"]
