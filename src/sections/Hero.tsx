@@ -20,7 +20,7 @@ export function Hero() {
               color: colors.primaryActive,
             }}
           >
-            A studio for fiber artists
+            Fair tools for fiber artists &amp; makers
           </p>
 
           <Title
@@ -71,6 +71,13 @@ export function Hero() {
               Free in your browser — no account needed
             </span>
           </div>
+
+          <p style={{ margin: '18px 0 0', fontSize: 14, color: colors.textTertiary }}>
+            Fair by design — free to use, no lock-in, and selling through us is always optional.{' '}
+            <a href="#promise" style={{ color: colors.link, fontWeight: 600 }}>
+              Our promise →
+            </a>
+          </p>
         </div>
       </div>
     </section>

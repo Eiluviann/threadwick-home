@@ -6,6 +6,8 @@ import { Faq } from './sections/Faq';
 import { Features } from './sections/Features';
 import { Hero } from './sections/Hero';
 import { HowItWorks } from './sections/HowItWorks';
+import { OurPromise } from './sections/Promise';
+import { Roadmap } from './sections/Roadmap';
 
 export default function App() {
   return (
@@ -16,7 +18,13 @@ export default function App() {
       <Header />
       <main id="main">
         <Hero />
+        <div id="promise">
+          <OurPromise />
+        </div>
         <DesignApproach />
+        <div id="roadmap">
+          <Roadmap />
+        </div>
         <div id="features">
           <Features />
         </div>

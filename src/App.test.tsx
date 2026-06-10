@@ -32,6 +32,8 @@ describe('App', () => {
     renderApp();
     const main = screen.getByRole('main');
     expect(within(main).getByRole('heading', { name: /chart granny squares the way you crochet them/i })).toBeInTheDocument();
+    expect(within(main).getByRole('heading', { name: /what.s on the hook/i })).toBeInTheDocument();
+    expect(within(main).getByRole('heading', { name: /fair tools for fiber artists/i })).toBeInTheDocument();
     expect(within(main).getByRole('heading', { name: /made for keeping projects together/i })).toBeInTheDocument();
     expect(within(main).getByRole('heading', { name: /from idea to chart in minutes/i })).toBeInTheDocument();
     expect(within(main).getByRole('heading', { name: /good to know/i })).toBeInTheDocument();

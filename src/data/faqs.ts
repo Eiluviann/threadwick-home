@@ -6,11 +6,15 @@ export interface Faq {
 export const FAQS: Faq[] = [
   {
     q: 'Is Threadwick free?',
-    a: 'Yes. Threadwick Studio is free to use right in your browser. An optional account adds extras like syncing and backups across your devices.',
+    a: 'Yes. The studio is free to use right in your browser, and an optional free account adds syncing and backups across your devices. The only paid features are for artists who choose to sell on or through the platform.',
   },
   {
     q: 'Do I need an account?',
     a: 'No. You can design, save and export without one. Sign in only when you want to sync your work, keep cloud backups, or share patterns more easily.',
+  },
+  {
+    q: 'When would I ever pay?',
+    a: 'Only if you choose to sell on or through the platform — like the upcoming marketplace. Designing, charting, exporting, and selling your patterns yourself outside Threadwick is free, and that’s by design.',
   },
   {
     q: 'What can I export?',
