@@ -19,7 +19,7 @@ export type Audience = 'studio' | 'artists' | 'you';
 export const AUDIENCE_LABEL: Record<Audience, string> = {
   studio: 'Studio',
   artists: 'For artists',
-  you: 'For you',
+  you: 'For makers',
 };
 
 /** Bento tile size on desktop (clamped down on tablet/mobile via CSS). */

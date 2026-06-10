@@ -24,7 +24,8 @@ function chipStyle(feature: PlannedFeature): CSSProperties {
     case 'artists':
       return { ...base, background: colors.primaryWash, color: colors.primaryActive };
     case 'you':
-      return { ...base, background: 'rgba(33, 32, 28, 0.08)', color: colors.textSecondary };
+      // Warm sage — a caring, handmade complement to the terracotta artists chip.
+      return { ...base, background: '#e6ede0', color: '#4e6a44' };
     default:
       return { ...base, background: colors.bgSunken, color: colors.textSecondary };
   }
